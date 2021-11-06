@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class Petrol implements Engine{
     /*private EngineImpl engineImpl;
     Petrol(EngineImpl engineImpl){
