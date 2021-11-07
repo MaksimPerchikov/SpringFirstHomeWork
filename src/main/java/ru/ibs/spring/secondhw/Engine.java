@@ -1,2 +1,6 @@
-package ru.ibs.spring.secondhw;public class Engine {
+package ru.ibs.spring.secondhw;
+
+public interface Engine {
+    String powerUp();
+
 }

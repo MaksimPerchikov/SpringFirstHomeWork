@@ -1,2 +1,5 @@
-package ru.ibs.spring.test;public class Music {
+package ru.ibs.spring.music;
+
+public interface Music {
+    String song();
 }

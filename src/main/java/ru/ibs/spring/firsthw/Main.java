@@ -9,8 +9,10 @@ import java.awt.*;
 public class Main {
     public static void main(String[] args){
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext("ru.ibs.spring.firsthw");
-        EngineImpl engine = applicationContext.getBean("engineImpl",EngineImpl.class);
-        engine.show();
+     //   EngineImpl engine = applicationContext.getBean("engineImpl",EngineImpl.class);
+       // engine.show();
+
+
 
     }
 }
