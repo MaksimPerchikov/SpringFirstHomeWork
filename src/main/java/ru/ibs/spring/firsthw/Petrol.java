@@ -7,10 +7,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Petrol implements Engine{
-    /*private EngineImpl engineImpl;
-    Petrol(EngineImpl engineImpl){
-        this.engineImpl = engineImpl;
-    }*/
+    @Autowired
+    private Engine engine;
+
+    @Override
+    public void powerUpSecondVersion() {
+        System.out.println(engine.getClass()+ " Работает на бензине." );
+    }
+
     @Override
     public String powerUp() {
         return "Работает на бензине.";
