@@ -1,6 +1,8 @@
 package ru.ibs.spring.secondhw;
 
 
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -13,16 +15,11 @@ import javax.annotation.PostConstruct;
 @Aspect
 @Service
 public class AspException {
+     @Pointcut("@annotation(ru.ibs.spring.secondhw.AnnotFuelExceptionHandle)")
+     public void callAtBusinessMethod(){}
 
-
-     @Pointcut("@annotation(ru.ibs.spring.secondhw.FuelExeprionHandler)")
-     public void fuelExceptionHandle(){}
-
-
-
-
-    /*@Around("fuelExceptionHandle")
-    public Object tets(){
-
-    }*/
+   @Around(value = "callAtBusinessMethod()")
+     public String check() throws Throwable {
+       return "/messError";
+     }
 }
