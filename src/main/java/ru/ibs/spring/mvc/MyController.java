@@ -1,4 +1,4 @@
-package ru.ibs.spring.secondhw;
+package ru.ibs.spring.mvc;
 
 
 import org.springframework.stereotype.Controller;

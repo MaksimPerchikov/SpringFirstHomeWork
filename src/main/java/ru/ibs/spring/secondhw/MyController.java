@@ -1,4 +1,4 @@
-package ru.ibs.spring.mvc;
+package ru.ibs.spring.secondhw;
 
 
 import org.springframework.stereotype.Controller;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/mvc")
 public class MyController {
 
-    @GetMapping("example")
+    /*@GetMapping("fuel")
     public String getExample(){
-        return "example";
-    }
+
+    }*/
 }
 

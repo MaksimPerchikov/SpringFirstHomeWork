@@ -2,15 +2,12 @@ package ru.ibs.spring.secondhw;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.ibs.spring.firsthw.Engine;
+import ru.ibs.spring.secondhw.Engine;
 
 @Service
-public class Diesel implements ru.ibs.spring.firsthw.Engine {
+public class Diesel implements Engine{
     @Autowired
     private Engine engine;
-
-    private ru.ibs.spring.firsthw.Diesel diesel;
-
 
     @Override
     public void powerUpSecondVersion() {
