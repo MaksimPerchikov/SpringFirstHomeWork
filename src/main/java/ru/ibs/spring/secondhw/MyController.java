@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/mvc")
 public class MyController {
 
-    /*@GetMapping("fuel")
+    @GetMapping("example")
     public String getExample(){
-
-    }*/
+        return "example";
+    }
 }
 
