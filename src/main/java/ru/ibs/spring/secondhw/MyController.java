@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -14,6 +15,8 @@ import java.util.List;
 public class MyController {
     private final static String CONST_PETROL = "petrol";
     private final static String CONST_DIESEL = "diesel";
+    private BeansCla beansCla;
+    HashMap<String, Engine> engineHashMap = beansCla.BeansCla();
 
     @GetMapping("/fuel")
     @AnnotFuelExceptionHandle
@@ -22,13 +25,12 @@ public class MyController {
             String name, Model model){
 
         if(CONST_PETROL.equals(name)){
-            Petrol petrol = new Petrol();
-            model.addAttribute("я работаю на",petrol.powerUp());
+            model.addAttribute("я работаю на",engineHashMap.get("petrol").powerUp());
 
 
         }else if(CONST_DIESEL.equals(name)) {
             Diesel diesel = new Diesel();
-            model.addAttribute("я работаю на", diesel.powerUp());
+            model.addAttribute("я работаю на", engineHashMap.get("diesel").powerUp());
         };
         return "myMeth";
     }
